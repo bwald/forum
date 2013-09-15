@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130915192031) do
+ActiveRecord::Schema.define(version: 20130915193750) do
 
-  create_table "threads", force: true do |t|
+  create_table "topics", force: true do |t|
     t.string   "subject"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "threads", ["updated_at"], name: "index_threads_by_updated_at"
+  add_index "topics", ["updated_at"], name: "index_threads_by_updated_at"
 
 end

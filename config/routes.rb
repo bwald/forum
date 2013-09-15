@@ -1,7 +1,7 @@
 Forum::Application.routes.draw do
 
-  resources :threads, :only => [:index]
+  resources :topics, :only => [:index]
 
-  root :to => "threads#index"
+  root :to => "topics#index"
 
 end

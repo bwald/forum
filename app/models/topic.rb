@@ -1,4 +1,4 @@
-class Thread < ActiveRecord::Base
+class Topic < ActiveRecord::Base
 
   validates :subject, :presence => :true
 
