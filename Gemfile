@@ -45,3 +45,6 @@ gem 'slim-rails'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'pry'
+gem 'pry-rails'
