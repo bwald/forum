@@ -2,6 +2,8 @@ h2 This is the topics index
 
 = link_to "add new topic", new_topic_path
 
-ol 
+table
   - @topics.each do |t|
-    li= link_to t.subject, ""
+    tr
+      td= link_to t.subject, ""
+      td= link_to "delete", topic_path(t), :method => :delete
