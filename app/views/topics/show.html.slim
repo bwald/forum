@@ -3,6 +3,8 @@ h2 showing topic #{@topic.id}
 
 h4= @topic.subject
 
-p ="has #{@topic.posts.count} posts"
+.posts
+  - @topic.posts.order('created_at asc').find_each do |post|
+    == render :partial => "post", :locals => { :post => post }
 
 p = link_to "delete this topic", topic_path(@topic), :method => :delete
