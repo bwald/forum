@@ -1,0 +1,11 @@
+h2 Create a new topic
+
+= form_for @topic do |f|
+  - if @topic.errors.any?
+    ul
+      - @topic.errors.full_messages.each do |m|
+        li= m
+
+  = f.label :subject
+  = f.text_field :subject, :size => 120
+  = f.submit

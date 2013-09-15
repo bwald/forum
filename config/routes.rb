@@ -1,6 +1,6 @@
 Forum::Application.routes.draw do
 
-  resources :topics, :only => [:index]
+  resources :topics
 
   root :to => "topics#index"
 
