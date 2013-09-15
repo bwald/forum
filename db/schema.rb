@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130915193750) do
+ActiveRecord::Schema.define(version: 20130915204026) do
+
+  create_table "posts", force: true do |t|
+    t.integer  "topic_id"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "posts", ["topic_id", "created_at"], name: "posts_by_topic_date"
 
   create_table "topics", force: true do |t|
     t.string   "subject"

@@ -5,5 +5,5 @@ h2 This is the topics index
 table
   - @topics.each do |t|
     tr
-      td= link_to t.subject, ""
+      td= link_to t.subject, topic_path(t)
       td= link_to "delete", topic_path(t), :method => :delete
