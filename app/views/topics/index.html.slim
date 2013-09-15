@@ -1,1 +1,5 @@
 h2 This is the topics index
+
+ol 
+  - @topics.each do |t|
+    li= link_to t.subject, ""
