@@ -3,4 +3,6 @@ h2 showing topic #{@topic.id}
 
 h4= @topic.subject
 
-="has #{@topic.posts.count} posts"
+p ="has #{@topic.posts.count} posts"
+
+p = link_to "delete this topic", topic_path(@topic), :method => :delete
